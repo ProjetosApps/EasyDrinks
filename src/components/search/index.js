@@ -7,12 +7,14 @@ import { colors } from '../../styles'
 
 export const Search = props => {
 
-	let { text = '' } = props;
+	let { value = '' } = props;
 	
 	return(
 		<View style={[(props.style)? props.style : styles.containerDefault ]}>
             <TextInput style={{color: '#888'}} 
-            		   placeholder={'Ex: Margarita'}	
+                       value={value} 
+                       onChangeText={props.onChangeText}
+                       placeholder={'Ex: Margarita'}	
             		/>
         </View>
    )

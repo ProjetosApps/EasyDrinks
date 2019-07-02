@@ -1,14 +1,16 @@
 export default {
 
   // sizes
-  extraForce: 28,
+  big: 18,
+  small: 12,
   force: 24,
   bigger: 22,
-  big: 18,
-  default: 16,
-  regular: 14,
-  small: 12,
   smaller: 11,
+  regular: 14,
+  default: 16,
+  extraForce: 28,
+  regular_bigger: 22,
+
 
 
   // Font Family default

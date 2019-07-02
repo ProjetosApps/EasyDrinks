@@ -2,6 +2,8 @@ const INITIAL_STATE = {
     change: 0,
     loading: false,
     drinks: [],
+    arrayOfGlass: [],
+    arrayOfIgradients: [],
     filter: { }, 
     msg_erro: '',
 };

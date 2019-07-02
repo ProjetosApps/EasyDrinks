@@ -1,24 +1,32 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 import { colors, metrics, fonts } from '../../styles';
 
 export default StyleSheet.create({
 	containerCard: { 
-		elevation: 5,
-		minHeight: 220,
-		borderRadius: 10,
+    elevation: 5,
+    minHeight: 120,
+    marginBottom: 15,
+    borderRadius: 10,
 		alignItems: 'center',
 		justifyContent: 'center',
+    width: Dimensions.get('window').width*0.40,
 	},
 
 	containerIcon: {
-		width: 120, 
-		height: 120, 
-		borderRadius: 60, 
+		width: 70, 
+		height: 70, 
+		borderRadius: 35, 
 		alignItems: 'center', 
 		backgroundColor: '#FFF', 
 		justifyContent: 'center',
-	}
+  },
+  
+  textLabel: {
+    fontWeight: '500',
+    color: colors.white, 
+    fontSize: fonts.regular, 
+  },
 
 });
 

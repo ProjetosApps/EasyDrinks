@@ -9,6 +9,7 @@ export default {
     secondaryLight: "#649dff",
     secondaryDark: "#2d51bf",
     secondaryText: "#4e4b61",
+    orangeLight: "#FFbF7c",
 
     divider: "#BDBDBD",
     error: "#951d23",
@@ -20,6 +21,7 @@ export default {
     greyLight: "#e6e6e6",
     grayBlack: "#fcfcfc",
 
-    vetColorsGradiente: ["#00AEAB", "#00AEAB", "#573D85"],
+    vetColorsGradienteBlue: ["#00AEAB", "#00AEAB", "#573D85"],
+    vetColorsGradiente: ['#FFab48', '#FFbe57', '#FFc25b'],
 
 };

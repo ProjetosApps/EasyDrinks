@@ -18,11 +18,11 @@ export const ListEmpty = props => {
 
 	                <View style={styles.containerImage}>
 
-	                    <Image source={require('../../assets/images/telescope.png')} style={styles.image} />
+	                    <Image source={require('../../assets/images/cocktail_none.png')} style={styles.image} />
 
 	                </View>
 
-	                <Text style={styles.textHeader}>Tudo limpo!</Text>
+	                <Text style={styles.textHeader}>Nada por aqui!</Text>
 	                <Text style={styles.textMensage}>Nenhum drink foi encontrado.</Text>
 
         		</View>)

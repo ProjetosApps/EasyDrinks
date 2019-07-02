@@ -11,7 +11,15 @@ export class DrinksRest {
         return  axios.get(url) 
        
     }
+ 
     
+    static getDrinksAlcoholic(alcoholic){
+    	
+    	let url = `${baseUrl}/filter.php?a=${alcoholic}`;
+
+        return  axios.get(url) 
+       
+    }
 
     static getDrinkById(idDrink){
     	
@@ -20,6 +28,39 @@ export class DrinksRest {
         return  axios.get(url) 
        
     }
+
+    static getListOfIgradients(){
+    	
+    	let url = `${baseUrl}/list.php?i=list`;
+
+        return  axios.get(url) 
+       
+    }
+    
+    static getListOfGlass(){
+    	
+    	let url = `${baseUrl}/list.php?g=list`;
+
+        return  axios.get(url) 
+       
+    }
+    
+    static getDrinksGlass(glass){
+    	
+    	let url = `${baseUrl}/filter.php?g=${glass}`;
+
+        return  axios.get(url) 
+       
+    }
+
+    static getDrinksIgradient(igradient){
+    	
+    	let url = `${baseUrl}/filter.php?i=${igradient}`;
+
+        return  axios.get(url) 
+       
+    }
+
 
 }
 

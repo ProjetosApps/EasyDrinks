@@ -15,7 +15,7 @@ export const ChooseCategoryButton = (props) =>{
         <TouchableScale onPress={props.onPress} 
                         activeScale={0.98}>
 
-            <LinearGradient colors={['#FFab48', '#FFbe57', '#FFc25b']} 
+            <LinearGradient colors={colors.vetColorsGradiente} 
                             style={stylesDefault.containerCard}
                             start={{ x: 0, y: 0.6 }} 
                             end={{ x: 0, y: 1 }}>
@@ -28,7 +28,7 @@ export const ChooseCategoryButton = (props) =>{
                 </View>
 
                 <View style={{marginTop: 15,}}>
-                    <Text style={{fontSize: 20, color: "#FFF", fontWeight: '500'}}>
+                    <Text style={stylesDefault.textLabel}>
                         {label}
                     </Text>
                 </View>

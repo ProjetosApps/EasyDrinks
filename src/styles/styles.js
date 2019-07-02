@@ -3,10 +3,6 @@ import { StyleSheet, Dimensions } from 'react-native';
 import { colors, fonts, metrics } from '.';
 
 const styles = StyleSheet.create({
-
-
-    // ---> Styles full
-
     content: {
 
         backgroundColor: colors.white,
@@ -24,16 +20,9 @@ const styles = StyleSheet.create({
 
     },
 
-    // ---> Login Styles
-
-    imageLogin: {
-
-        height: 282,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.dark,
-        overflow: 'hidden',
-
+    defaultLine: {
+      flexDirection: 'row', 
+      alignItems: 'center',
     },
 
     textRecovery: {
@@ -62,29 +51,24 @@ const styles = StyleSheet.create({
 
     },
 
-    // ---> form styles
-
     titleForm: {
 
-        fontSize: fonts.bigger,
-        fontWeight:'800',
-        color: colors.dark,
-        marginBottom: 20,
+      fontWeight:'800',
+      marginBottom: 20,
+      color: colors.dark,
+      fontSize: fonts.bigger,
 
-    },
-
-    contentForm: {// backgroundColor: colors.primary,
     },
 
     contentSwitch: {
 
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: 12,
-        borderRadius: 4,
-        backgroundColor: colors.greyLight,
-        marginTop: 14,
+      padding: 12,
+      marginTop: 14,
+      borderRadius: 4,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      backgroundColor: colors.greyLight,
 
     },
 
@@ -120,8 +104,8 @@ const styles = StyleSheet.create({
 
     textInputStyle: {
         flex: 1,
-        textAlign: 'center', 
         marginLeft: 40, 
+        textAlign: 'center', 
         color: colors.primary, 
     },
 
@@ -138,83 +122,7 @@ const styles = StyleSheet.create({
         color: colors.primary, 
         textAlign: 'center',
     },
-
-
-    containerHeaderCategory: {
-        paddingTop: 15, 
-        flexDirection: 'row', 
-        alignItems: 'center', 
-        paddingHorizontal: 20, 
-        backgroundColor: '#FFF', 
-    },
-
-    containerTextHeaderCategory: {
-        marginLeft: 10
-    },
-
-    iconLogo: {
-        width: 50,
-        height: 50, 
-    },
-
-    textEasy: {
-        fontWeight: '500',
-        fontSize: fonts.force, 
-    },
-
-    textDrinks: {
-        fontSize: 20, 
-        fontWeight: '100',
-    },
-
-    bodyCategory: {
-        flex: 1, 
-        paddingHorizontal: 30, 
-        backgroundColor: '#fff', 
-        justifyContent: 'space-around' ,
-   },
-
-   iconCategory: {
-        width: 80,
-        height: 80, 
-    },
-
-    bodyWhite: {
-        flex: 1, 
-        paddingTop: 15, 
-        backgroundColor: '#FFF',
-        borderTopLeftRadius: 20, 
-        borderTopRightRadius: 20, 
-    },
-
-    filterButton: {
-        zIndex: 5, 
-        right: 20, 
-        width: 65, 
-        height: 65, 
-        bottom: 20, 
-        elevation: 5, 
-        borderRadius: 32.5, 
-        alignItems:'center', 
-        position: 'absolute', 
-        justifyContent: 'center', 
-        backgroundColor: colors.white, 
-    },
-
-    buttonFastFilter: {
-        height: 30, 
-        borderRadius: 15,  
-        alignItems: 'center', 
-        paddingHorizontal: 10,
-        justifyContent: 'center', 
-    },
-
-
-    textTitleScreen: {
-        color: '#FFF', 
-        fontWeight: '500', 
-        fontSize: fonts.bigger, 
-    },
+   
 });
 
 export default styles;
