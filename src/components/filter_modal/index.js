@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Modal, TouchableWithoutFeedback, Text, ScrollView } from 'react-native'
+import { View, Modal, TouchableWithoutFeedback, Text, ScrollView, ActivityIndicator } from 'react-native'
 
 import styles from './styles'
 
@@ -13,7 +13,7 @@ export const FilterModal = props => {
  
 	return(
 	    <Modal
-	          animationType="slide"
+	          animationType="fade"
 	          transparent
 	          visible={modalVisible}
 	          onRequestClose={props._onCancel}>
@@ -32,7 +32,7 @@ export const FilterModal = props => {
                   <Text style={styles.textLabelInfos}>Filter by: </Text>
 
 
-                  <TouchableScale onPress={props._setModal} 
+                  <TouchableScale onPress={props._onCancel} 
                               activeScale={0.99}  
                               style={styles.buttonClearFilter} >
                     <Text style={[styles.textClearFilter, {color: (props.filter.filterValue !== '')? colors.primary : '#ddd' }]}>Clear Filter</Text>
@@ -54,9 +54,14 @@ export const FilterModal = props => {
                   </View>
 
                   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                   
+                    {arrayOfGlass.length === 0 &&
+                    <View style={{height: 30, width: 300, alignItems: 'center', justifyContent: 'center', }}>
+                        <ActivityIndicator size="small" color={colors.primary} />
+                    </View>}
+                   
                     <View style={styles.containerListOfGlass}>
-
-                    {arrayOfGlass.map( item => (
+                     {arrayOfGlass.map( item => (
                       <ButtonFilterFast label={item.strGlass} 
                                         style={styles.buttonFastFilter} 
                                         onPress={() => props._setFilter(item.strGlass, 'glass')}
@@ -83,6 +88,11 @@ export const FilterModal = props => {
                   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                     <View style={styles.containerListOfIgradients}>
 
+                    {arrayOfIgradients.length === 0 &&
+                    <View style={{height: 40, width: 300, alignItems: 'center', justifyContent: 'center', }}>
+                        <ActivityIndicator size="small" color={colors.primary} />
+                    </View>}
+    
                     {arrayOfIgradients.map( item => (
                       <ButtonFilterFast label={item.strIngredient1} 
                                         style={styles.buttonFastFilter} 
@@ -102,10 +112,10 @@ export const FilterModal = props => {
 
               <View style={styles.footerModal}>
                
-                <TouchableScale onPress={props._onCancel} 
+                <TouchableScale onPress={() => props._onCancel(true)} 
                               activeScale={0.99} 
                               style={styles.btnCancel} >
-                  <Text style={styles.textClear}>Cancel</Text>
+                  <Text style={styles.textCancel}>Cancel</Text>
                 
                 </TouchableScale>
 

@@ -37,9 +37,10 @@ const styles = StyleSheet.create({
 
   bodyCategory: {
       flex: 1, 
+      paddingTop: 5,
       flexWrap: 'wrap',
       flexDirection: 'row',
-      paddingHorizontal: 20, 
+      paddingHorizontal: 30, 
       backgroundColor: '#fff', 
       justifyContent: 'space-between' ,
   },

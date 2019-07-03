@@ -49,8 +49,8 @@ export default StyleSheet.create({
   },
 
   containerListOfGlass: {
-    flexDirection: 'row', 
     flexWrap: 'wrap', 
+    flexDirection: 'row', 
   },
 
   headerInfos: {

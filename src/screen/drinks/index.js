@@ -27,18 +27,22 @@ class Drinks extends Component {
     }
 
     componentDidMount(){
-        let { arrayOfIgradients, arrayOfGlass } = this.props;
+      
 
         this._refresh();
 
-        if(arrayOfIgradients.length == 0 || arrayOfGlass.length == 0 || upadete )
-          this.props._init();
+      
     }
 
 
-    _setModal = () => {
-
-        this.setState({modalVisible: !this.state.modalVisible});
+    _setModal = () => {  
+      let { arrayOfIgradients, arrayOfGlass } = this.props;
+      
+      this.setState({modalVisible: !this.state.modalVisible});
+      
+      if(arrayOfIgradients.length == 0 || arrayOfGlass.length == 0 )
+        this.props._init();
+        
 
     }
 
@@ -52,10 +56,14 @@ class Drinks extends Component {
 
     }
 
-    _onCancel = () => {
+    _onCancel = (refresh = false) => {
+      
+      if(refresh) 
+        this._refresh();
 
       this.setState({filter: { filterValue: '', type: '' }});
       this._setModal();
+      
     } 
 
     _setFilter = (filterValue, type) => {
@@ -159,7 +167,12 @@ class Drinks extends Component {
                     <FlatList data={(nameFilter !== '')? arrayDrinksFilterByName : drinks}
                               refreshing={this.props.loading}
                               onRefresh={() => this._refresh()}
-                              ListEmptyComponent={() => <ListEmpty loading={this.props.loading} />}
+                              ListEmptyComponent={() => { if(!this.props.loading)
+                                                              return (<ListEmpty loading={this.props.loading} />)
+                                                          else 
+                                                              return <View/>  
+                                                        }
+                                                  }
                               renderItem={({item, index}) => <CardDrink onPress={() => Actions.Drink_Details({idDrink: item.idDrink}) } 
                                                                          item={item} index={index} /> }
                               />
