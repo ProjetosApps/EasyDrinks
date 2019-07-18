@@ -54,6 +54,7 @@ const style = StyleSheet.create({
   buttonFastFilter: {
       height: 30, 
       borderRadius: 15,  
+      marginVertical: 5, 
       alignItems: 'center', 
       paddingHorizontal: 10,
       justifyContent: 'center', 

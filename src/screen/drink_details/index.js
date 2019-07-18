@@ -84,8 +84,7 @@ export default class Drink_Details extends Component {
                   renderParallaxForeground={() => <View style={{height: 240, paddingTop: 30, justifyContent: "flex-end"  }} />}
                   renderParallaxBackground={() => <Image blurRadius={0.5} source={{uri: drink.strDrinkThumb}} style={{width: '100%', height: 240}} /> }
                 >
-
-
+                
                 <View style={styles.bodyWhite}>
 
                     {loading &&
@@ -166,6 +165,7 @@ export default class Drink_Details extends Component {
 
                     </View>
                 </View>
+                
                 </ParallaxScroll>
 
             </GradientContainer>

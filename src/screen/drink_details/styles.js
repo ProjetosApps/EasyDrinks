@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   labelText: {
     height: 30, 
     borderRadius: 15,  
+    marginVertical: 5,
     alignItems: 'center', 
     paddingHorizontal: 10,
     justifyContent: 'center', 

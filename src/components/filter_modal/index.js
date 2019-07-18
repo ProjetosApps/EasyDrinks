@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Modal, TouchableWithoutFeedback, Text, ScrollView, ActivityIndicator } from 'react-native'
+import { View, Modal, TouchableWithoutFeedback, Text, ScrollView, ActivityIndicator, FlatList } from 'react-native'
 
 import styles from './styles'
 
@@ -26,7 +26,7 @@ export const FilterModal = props => {
 					<TouchableWithoutFeedback onPress={() => false } useForeground >
 						<View style={styles.containerWhite}>
                
-              <View style={{flex: 1}} >
+              <View style={{flex: 1,  }} >
                 <View style={styles.containerHeaderModal} >
                   
                   <Text style={styles.textLabelInfos}>Filter by: </Text>
@@ -60,6 +60,7 @@ export const FilterModal = props => {
                         <ActivityIndicator size="small" color={colors.primary} />
                     </View>}
                    
+                    
                     <View style={styles.containerListOfGlass}>
                      {arrayOfGlass.map( item => (
                       <ButtonFilterFast label={item.strGlass} 
@@ -74,7 +75,8 @@ export const FilterModal = props => {
                   </ScrollView>
                 </View>
               
-                <View style={{}} >
+                <View style={{ flex: 1,}} >
+
                   <View style={styles.headerInfos} >
                               
                     <View style={styles.tick} />
@@ -86,7 +88,7 @@ export const FilterModal = props => {
                   </View>
 
                   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <View style={styles.containerListOfIgradients}>
+                    <View style={[styles.containerListOfIgradients]}>
 
                     {arrayOfIgradients.length === 0 &&
                     <View style={{height: 40, width: 300, alignItems: 'center', justifyContent: 'center', }}>
